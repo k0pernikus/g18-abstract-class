@@ -15,10 +15,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
         Quader q = new Quader(3, 5, 6);
-
         q.displayData();
     }
-
 }

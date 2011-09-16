@@ -2,14 +2,14 @@ package koerper;
 
 abstract class Form {
     // properties
-    private String formBezeichung;
-    private int volumen;
-    private int oberflaeche;
-    private int grundflaeche;
-    private int umfangGrundflaeche;
+    protected String formBezeichung;
+    protected int volumen;
+    protected int oberflaeche;
+    protected int grundflaeche;
+    protected int umfangGrundflaeche;
 
     // abstract calc methods
-    abstract protected String setFormBeschreibung();
+    abstract protected String setzeFormBeschreibung();
     abstract protected int berechneVolumen();
     abstract protected int berechneGrundflaeche();
     abstract protected int berechneOberflaeche();
@@ -24,27 +24,27 @@ abstract class Form {
         System.out.println("Volumen:" + this.getVolumen());
     }
 
-    protected void calculateAllProperties() {
-        setFormBeschreibung();
-        berechneVolumen();
-        berechneGrundflaeche();
-        berechneUmfangGrundflaeche();
-        berechneVolumen();
-    }
-
-    public void setFormBezeichung(String formBezeichung) {
-        this.formBezeichung = setFormBeschreibung();
+    public void calculateAllProperties() {
+        setFormBezeichung();
+        setVolumen();
+        setGrundflaeche();
+        setUmfangGrundflaeche();
+        setVolumen();
     }
 
     public String getFormBezeichnung() {
         return formBezeichung;
     }
 
+    public void setFormBezeichung() {
+        this.formBezeichung = setzeFormBeschreibung();
+    }
+
     public int getGrundflaeche() {
         return grundflaeche;
     }
 
-    public void setGrundflaeche(int grundflaeche) {
+    public void setGrundflaeche() {
         this.grundflaeche = berechneGrundflaeche();
     }
 
@@ -60,8 +60,8 @@ abstract class Form {
         return umfangGrundflaeche;
     }
 
-    public void setUmfangGrundflaeche(int umfangGrundflaeche) {
-        this.umfangGrundflaeche = umfangGrundflaech;
+    public void setUmfangGrundflaeche() {
+        this.umfangGrundflaeche = berechneGrundflaeche();
     }
 
     public int getVolumen() {

@@ -5,10 +5,6 @@
 
 package koerper;
 
-/**
- *
- * @author it0-KretPh
- */
 public class Wuerfel extends Quader {
     Wuerfel(int a){
         super(a, a, a);

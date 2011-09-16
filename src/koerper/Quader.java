@@ -6,13 +6,15 @@ public class Quader extends Form {
     private int c;
 
     Quader(int a, int b, int c) {
-        this.setA(a);
-        this.setB(b);
-        this.setC(c);
+        setA(a);
+        setB(b);
+        setC(c);
+
+        calculateAllProperties();
     }
 
     @Override
-    public String setFormBeschreibung() {
+    public String setzeFormBeschreibung() {
         return "Quader";
     }
 
