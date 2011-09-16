@@ -17,6 +17,8 @@ public class Main {
         // TODO code application logic here
 
         Quader q = new Quader(3, 5, 6);
+
+        q.displayData();
     }
 
 }

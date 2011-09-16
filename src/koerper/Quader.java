@@ -12,7 +12,7 @@ public class Quader extends Form {
     }
 
     @Override
-    protected String berechneFormBezeichnung() {
+    public String setFormBeschreibung() {
         return "Quader";
     }
 
