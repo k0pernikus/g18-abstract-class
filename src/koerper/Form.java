@@ -2,7 +2,6 @@ package koerper;
 
 abstract class Form {
     // properties
-
     private String formBezeichung;
     private int volumen;
     private int oberflaeche;
@@ -34,7 +33,7 @@ abstract class Form {
     }
 
     public void setFormBezeichung(String formBezeichung) {
-        formBezeichung = setFormBeschreibung();
+        this.formBezeichung = setFormBeschreibung();
     }
 
     public String getFormBezeichnung() {
@@ -46,7 +45,7 @@ abstract class Form {
     }
 
     public void setGrundflaeche(int grundflaeche) {
-        grundflaeche = berechneGrundflaeche();
+        this.grundflaeche = berechneGrundflaeche();
     }
 
     public int getOberflaeche() {
@@ -54,7 +53,7 @@ abstract class Form {
     }
 
     public void setOberflaeche(int oberflaeche) {
-        oberflaeche = berechneOberflaeche();
+        this.oberflaeche = berechneOberflaeche();
     }
 
     public int getUmfangGrundflaeche() {
@@ -62,7 +61,7 @@ abstract class Form {
     }
 
     public void setUmfangGrundflaeche(int umfangGrundflaeche) {
-        umfangGrundflaeche = umfangGrundflaeche;
+        this.umfangGrundflaeche = umfangGrundflaech;
     }
 
     public int getVolumen() {
@@ -70,6 +69,6 @@ abstract class Form {
     }
 
     public void setVolumen() {
-        volumen = berechneVolumen();
+        this.volumen = berechneVolumen();
     }
 }
