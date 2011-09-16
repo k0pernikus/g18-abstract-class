@@ -11,13 +11,9 @@ abstract class Form {
 
     // abstract calc methods
     abstract protected String setFormBeschreibung();
-
     abstract protected int berechneVolumen();
-
     abstract protected int berechneGrundflaeche();
-
     abstract protected int berechneOberflaeche();
-
     abstract protected int berechneUmfangGrundflaeche();
 
     // Output all Data:
@@ -30,27 +26,27 @@ abstract class Form {
     }
 
     protected void calculateAllProperties() {
-        this.setFormBeschreibung();
-        this.berechneVolumen();
-        this.berechneGrundflaeche();
-        this.berechneUmfangGrundflaeche();
-        this.berechneVolumen();
+        setFormBeschreibung();
+        berechneVolumen();
+        berechneGrundflaeche();
+        berechneUmfangGrundflaeche();
+        berechneVolumen();
     }
 
     public void setFormBezeichung(String formBezeichung) {
-        this.formBezeichung = setFormBeschreibung();
+        formBezeichung = setFormBeschreibung();
     }
 
     public String getFormBezeichnung() {
-        return this.formBezeichung;
+        return formBezeichung;
     }
 
     public int getGrundflaeche() {
-        return this.grundflaeche;
+        return grundflaeche;
     }
 
     public void setGrundflaeche(int grundflaeche) {
-        this.grundflaeche = berechneGrundflaeche();
+        grundflaeche = berechneGrundflaeche();
     }
 
     public int getOberflaeche() {
@@ -58,7 +54,7 @@ abstract class Form {
     }
 
     public void setOberflaeche(int oberflaeche) {
-        this.oberflaeche = berechneOberflaeche();
+        oberflaeche = berechneOberflaeche();
     }
 
     public int getUmfangGrundflaeche() {
@@ -66,7 +62,7 @@ abstract class Form {
     }
 
     public void setUmfangGrundflaeche(int umfangGrundflaeche) {
-        this.umfangGrundflaeche = umfangGrundflaeche;
+        umfangGrundflaeche = umfangGrundflaeche;
     }
 
     public int getVolumen() {
@@ -74,6 +70,6 @@ abstract class Form {
     }
 
     public void setVolumen() {
-        this.volumen = berechneVolumen();
+        volumen = berechneVolumen();
     }
 }
