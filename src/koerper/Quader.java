@@ -25,7 +25,7 @@ public class Quader extends Form {
 
     @Override
     public int berechneOberflaeche() {
-        return 2 * (getA() * getB() + getA() * getC() + getB() * getC());
+        return 2 * (getA()*getB() + getA()*getC() + getB()*getC());
     }
 
     @Override

@@ -9,4 +9,9 @@ public class Wuerfel extends Quader {
     Wuerfel(int a){
         super(a, a, a);
     }
+
+    @Override
+    public String setzeFormBeschreibung() {
+        return "Würfel";
+    }
 }

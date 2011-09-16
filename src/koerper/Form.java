@@ -22,12 +22,14 @@ abstract class Form {
         System.out.println("Oberflaeche:" + this.getOberflaeche());
         System.out.println("UmfangGrundflaeche:" + this.getUmfangGrundflaeche());
         System.out.println("Volumen:" + this.getVolumen());
+        System.out.println("=====================");
     }
 
     public void calculateAllProperties() {
         setFormBezeichung();
         setVolumen();
         setGrundflaeche();
+        setOberflaeche();
         setUmfangGrundflaeche();
         setVolumen();
     }
@@ -52,7 +54,7 @@ abstract class Form {
         return oberflaeche;
     }
 
-    public void setOberflaeche(int oberflaeche) {
+    public void setOberflaeche() {
         this.oberflaeche = berechneOberflaeche();
     }
 
