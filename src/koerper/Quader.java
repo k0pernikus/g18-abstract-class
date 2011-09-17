@@ -44,7 +44,7 @@ public class Quader extends Form {
         return a;
     }
 
-    public void setA(double a) {
+    private void setA(double a) {
         this.a = a;
     }
 
@@ -52,7 +52,7 @@ public class Quader extends Form {
         return b;
     }
 
-    public void setB(double b) {
+    private void setB(double b) {
         this.b = b;
     }
 
@@ -60,7 +60,7 @@ public class Quader extends Form {
         return c;
     }
 
-    public void setC(double c) {
+    private void setC(double c) {
         this.c = c;
     }
 }

@@ -6,7 +6,6 @@ public class KreisZylinder extends Form {
     KreisZylinder(double r, double h){
         setR(r);
         setH(h);
-
         calculateAllProperties();
     }
 
@@ -39,7 +38,7 @@ public class KreisZylinder extends Form {
         return r;
     }
 
-    public void setR(double d) {
+    private void setR(double d) {
         this.r = d;
     }
 
@@ -47,7 +46,7 @@ public class KreisZylinder extends Form {
         return h;
     }
 
-    public void setH(double h) {
+    private void setH(double h) {
         this.h = h;
     }
 }
