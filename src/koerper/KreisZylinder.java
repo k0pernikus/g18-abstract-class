@@ -3,23 +3,30 @@ public class KreisZylinder extends Form {
     private double r;
     private double h;
 
+    KreisZylinder(double r, double h){
+        setR(r);
+        setH(h);
+
+        calculateAllProperties();
+    }
+
     @Override
-    protected int berechneGrundflaeche() {
+    protected double berechneGrundflaeche() {
+        return Math.PI*getR()*getR();
+    }
+
+    @Override
+    protected double berechneOberflaeche() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    protected int berechneOberflaeche() {
+    protected double berechneUmfangGrundflaeche() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    protected int berechneUmfangGrundflaeche() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    protected int berechneVolumen() {
+    protected double berechneVolumen() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

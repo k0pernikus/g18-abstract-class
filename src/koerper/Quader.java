@@ -1,11 +1,11 @@
 package koerper;
 
 public class Quader extends Form {
-    private int a;
-    private int b;
-    private int c;
+    private double a;
+    private double b;
+    private double c;
 
-    Quader(int a, int b, int c) {
+    Quader(double a, double b, double c) {
         setA(a);
         setB(b);
         setC(c);
@@ -19,48 +19,48 @@ public class Quader extends Form {
     }
 
     @Override
-    public int berechneGrundflaeche() {
+    public double berechneGrundflaeche() {
         return getA() * getB();
     }
 
     @Override
-    public int berechneOberflaeche() {
+    public double berechneOberflaeche() {
         return 2 * (getA()*getB() + getA()*getC() + getB()*getC());
     }
 
     @Override
-    public int berechneUmfangGrundflaeche() {
+    public double berechneUmfangGrundflaeche() {
         return 2 * getA() + 2 * getB();
     }
 
     @Override
-    public int berechneVolumen() {
+    public double berechneVolumen() {
         return getA() * getB() * getC();
     }
 
     // Specific Setters Getters
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
     }
 
-    public void setC(int c) {
+    public void setC(double c) {
         this.c = c;
     }
 }

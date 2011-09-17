@@ -1,29 +1,34 @@
 package koerper;
 public class DreieckZylinder extends Form {
     //Dreieckseiten
-    private int a;
-    private int b;
-    private int c;
+    private double a;
+    private double b;
+    private double c;
     //Zylinderhoehe
-    private int h;
+    private double h;
+
+    public DreieckZylinder() {
+    }
+
+
 
     @Override
-    protected int berechneGrundflaeche() {
+    protected double berechneGrundflaeche() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    protected int berechneOberflaeche() {
+    protected double berechneOberflaeche() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    protected int berechneUmfangGrundflaeche() {
+    protected double berechneUmfangGrundflaeche() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    protected int berechneVolumen() {
+    protected double berechneVolumen() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -32,37 +37,35 @@ public class DreieckZylinder extends Form {
         return "Dreieckszylinder";
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
     }
 
-    public void setC(int c) {
+    public void setC(double c) {
         this.c = c;
     }
 
-    public int getH() {
+    public double getH() {
         return h;
     }
 
-    public void setH(int h) {
+    public void setH(double h) {
         this.h = h;
     }
-
-
 }

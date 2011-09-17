@@ -6,7 +6,7 @@
 package koerper;
 
 public class Wuerfel extends Quader {
-    Wuerfel(int a){
+    Wuerfel(double a){
         super(a, a, a);
     }
 

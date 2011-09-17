@@ -1,19 +1,23 @@
 package koerper;
 
 abstract class Form {
+    Form() {
+        calculateAllProperties();
+    }
+
     // properties
     protected String formBezeichung;
-    protected int volumen;
-    protected int oberflaeche;
-    protected int grundflaeche;
-    protected int umfangGrundflaeche;
+    protected double volumen;
+    protected double oberflaeche;
+    protected double grundflaeche;
+    protected double umfangGrundflaeche;
 
     // abstract calc methods
     abstract protected String setzeFormBeschreibung();
-    abstract protected int berechneVolumen();
-    abstract protected int berechneGrundflaeche();
-    abstract protected int berechneOberflaeche();
-    abstract protected int berechneUmfangGrundflaeche();
+    abstract protected double berechneVolumen();
+    abstract protected double berechneGrundflaeche();
+    abstract protected double berechneOberflaeche();
+    abstract protected double berechneUmfangGrundflaeche();
 
     // Output all Data:
     public void displayData() {
@@ -42,7 +46,7 @@ abstract class Form {
         this.formBezeichung = setzeFormBeschreibung();
     }
 
-    public int getGrundflaeche() {
+    public double getGrundflaeche() {
         return grundflaeche;
     }
 
@@ -50,7 +54,7 @@ abstract class Form {
         this.grundflaeche = berechneGrundflaeche();
     }
 
-    public int getOberflaeche() {
+    public double getOberflaeche() {
         return oberflaeche;
     }
 
@@ -58,7 +62,7 @@ abstract class Form {
         this.oberflaeche = berechneOberflaeche();
     }
 
-    public int getUmfangGrundflaeche() {
+    public double getUmfangGrundflaeche() {
         return umfangGrundflaeche;
     }
 
@@ -66,7 +70,7 @@ abstract class Form {
         this.umfangGrundflaeche = berechneGrundflaeche();
     }
 
-    public int getVolumen() {
+    public double getVolumen() {
         return volumen;
     }
 
