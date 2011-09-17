@@ -1,6 +1,6 @@
 package koerper;
 public class KreisZylinder extends Form {
-    private double d;
+    private double r;
     private double h;
 
     @Override
@@ -28,12 +28,12 @@ public class KreisZylinder extends Form {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public double getD() {
-        return d;
+    public double getR() {
+        return r;
     }
 
-    public void setD(double d) {
-        this.d = d;
+    public void setR(double d) {
+        this.r = d;
     }
 
     public double getH() {
