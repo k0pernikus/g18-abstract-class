@@ -1,10 +1,6 @@
 package koerper;
 
 abstract class Form {
-    Form() {
-        calculateAllProperties();
-    }
-
     // properties
     protected String formBezeichung;
     protected double volumen;
@@ -67,7 +63,7 @@ abstract class Form {
     }
 
     public void setUmfangGrundflaeche() {
-        this.umfangGrundflaeche = berechneGrundflaeche();
+        this.umfangGrundflaeche = berechneUmfangGrundflaeche();
     }
 
     public double getVolumen() {
