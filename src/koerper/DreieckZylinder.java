@@ -10,26 +10,24 @@ public class DreieckZylinder extends Form {
     public DreieckZylinder() {
     }
 
-
-
     @Override
     protected double berechneGrundflaeche() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override
     protected double berechneOberflaeche() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override
     protected double berechneUmfangGrundflaeche() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override
     protected double berechneVolumen() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override

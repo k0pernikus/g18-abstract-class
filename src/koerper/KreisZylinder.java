@@ -17,22 +17,22 @@ public class KreisZylinder extends Form {
 
     @Override
     protected double berechneOberflaeche() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override
     protected double berechneUmfangGrundflaeche() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override
     protected double berechneVolumen() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return 0;
     }
 
     @Override
     protected String setzeFormBeschreibung() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return "Kreiszylinder";
     }
 
     public double getR() {
