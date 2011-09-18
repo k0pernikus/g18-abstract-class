@@ -32,7 +32,7 @@ public class Quader extends Form {
 
     @Override
     public double getVolumen() {
-        return getGrundflaeche() * ge;
+        return getGrundflaeche() * getHoehe();
     }
 
     // Specific Setters Getters
