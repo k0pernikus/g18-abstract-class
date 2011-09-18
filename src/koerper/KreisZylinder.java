@@ -1,31 +1,35 @@
 package koerper;
 public class KreisZylinder extends Form {
-    private double r;
-    private double h;
+    private double radius;
+    private double hoehe;
 
     KreisZylinder(double r, double h){
-        setR(r);
-        setH(h);
+        setRadius(r);
+        setHoehe(h);
     }
 
     @Override
     protected double getGrundflaeche() {
-        return Math.PI*getR()*getR();
+        return Math.PI *getRadius() * getRadius();
     }
 
     @Override
     protected double getOberflaeche() {
-        return 0;
+        return 2 * getGrundflaeche() + getMantelflaeche();
+    }
+
+    private double getMantelflaeche() {
+        return getUmfangGrundflaeche() * getHoehe();
     }
 
     @Override
     protected double getUmfangGrundflaeche() {
-        return 0;
+        return Math.PI * 2 * getRadius();
     }
 
     @Override
     protected double getVolumen() {
-        return 0;
+        return getGrundflaeche() * getHoehe();
     }
 
     @Override
@@ -33,19 +37,27 @@ public class KreisZylinder extends Form {
         return "Kreiszylinder";
     }
 
-    public double getR() {
-        return r;
+    public double getRadius() {
+        return radius;
     }
 
-    private void setR(double d) {
-        this.r = d;
+    public void setRadius(double radius) {
+        if (radius <= 0 ) {
+            throw new IllegalArgumentException("The number must be greater than 0.");
+        }
+        
+        this.radius = radius;
     }
 
-    public double getH() {
-        return h;
+    public double getHoehe() {
+        return hoehe;
     }
 
-    private void setH(double h) {
-        this.h = h;
+    public void setHoehe(double hoehe) {
+        if (hoehe <= 0 ) {
+            throw new IllegalArgumentException("The number must be greater than 0.");
+        }
+        
+        this.hoehe = hoehe;
     }
 }

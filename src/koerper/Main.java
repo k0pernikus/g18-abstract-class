@@ -9,7 +9,13 @@ public class Main {
 
         q.displayData();
         w.displayData();
-        k.displayData();
+        
         d.displayData();
+
+        k.displayData();
+        k.setHoehe(25);
+        k.displayData();
+
+        k.setRadius(-1);
     }
 }
