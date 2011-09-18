@@ -6,31 +6,30 @@ public class KreisZylinder extends Form {
     KreisZylinder(double r, double h){
         setR(r);
         setH(h);
-        calculateAllProperties();
     }
 
     @Override
-    protected double berechneGrundflaeche() {
+    protected double getGrundflaeche() {
         return Math.PI*getR()*getR();
     }
 
     @Override
-    protected double berechneOberflaeche() {
+    protected double getOberflaeche() {
         return 0;
     }
 
     @Override
-    protected double berechneUmfangGrundflaeche() {
+    protected double getUmfangGrundflaeche() {
         return 0;
     }
 
     @Override
-    protected double berechneVolumen() {
+    protected double getVolumen() {
         return 0;
     }
 
     @Override
-    protected String setzeFormBeschreibung() {
+    protected String getFormBezeichnung() {
         return "Kreiszylinder";
     }
 

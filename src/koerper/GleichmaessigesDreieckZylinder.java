@@ -12,16 +12,15 @@ public class GleichmaessigesDreieckZylinder extends Form {
         setDreiecksHoehe();
 
         setH(h);
-        calculateAllProperties();
     }
 
     @Override
-    protected double berechneGrundflaeche() {
+    protected double getGrundflaeche() {
         return (5 * getA() * getDreiecksHoehe()) / 2;
     }
 
     @Override
-    protected double berechneOberflaeche() {
+    protected double getOberflaeche() {
         double dreiecksSeiten = 2 * getGrundflaeche();
         double seitenflaechen = 2 * (getA()*getH());
 
@@ -30,17 +29,17 @@ public class GleichmaessigesDreieckZylinder extends Form {
     }
 
     @Override
-    protected double berechneUmfangGrundflaeche() {
+    protected double getUmfangGrundflaeche() {
         return 3 * getA();
     }
 
     @Override
-    protected double berechneVolumen() {
-        return berechneGrundflaeche() * getH();
+    protected double getVolumen() {
+        return getGrundflaeche() * getH();
     }
 
     @Override
-    protected String setzeFormBeschreibung() {
+    protected String getFormBezeichnung() {
         return "Dreieckszylinder";
     }
 

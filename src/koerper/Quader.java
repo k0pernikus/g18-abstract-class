@@ -9,32 +9,30 @@ public class Quader extends Form {
         setA(a);
         setB(b);
         setC(c);
-
-        calculateAllProperties();
     }
 
     @Override
-    public String setzeFormBeschreibung() {
+    public String getFormBezeichnung() {
         return "Quader";
     }
 
     @Override
-    public double berechneGrundflaeche() {
+    public double getGrundflaeche() {
         return getA() * getB();
     }
 
     @Override
-    public double berechneOberflaeche() {
+    public double getOberflaeche() {
         return 2 * (getA()*getB() + getA()*getC() + getB()*getC());
     }
 
     @Override
-    public double berechneUmfangGrundflaeche() {
+    public double getUmfangGrundflaeche() {
         return 2 * getA() + 2 * getB();
     }
 
     @Override
-    public double berechneVolumen() {
+    public double getVolumen() {
         return getA() * getB() * getC();
     }
 
