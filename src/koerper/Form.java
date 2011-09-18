@@ -29,11 +29,12 @@ abstract class Form {
 
     // Output all Data:
     public void displayData() {
-        System.out.println("Bezeichnung: " + this.getFormBezeichnung());
-        System.out.println("Grundflaeche:" + this.getGrundflaeche());
-        System.out.println("Oberflaeche:" + this.getOberflaeche());
-        System.out.println("UmfangGrundflaeche:" + this.getUmfangGrundflaeche());
-        System.out.println("Volumen:" + this.getVolumen());
+        System.out.println("Bezeichnung: " + getFormBezeichnung());
+        System.out.println("Grundflaeche: " + getGrundflaeche());
+        System.out.println("Oberflaeche: " + getOberflaeche());
+        System.out.println("UmfangGrundflaeche: " + getUmfangGrundflaeche());
+        System.out.println("Volumen: " + getVolumen());
         System.out.println("=====================");
+        System.out.println();
     }
 }

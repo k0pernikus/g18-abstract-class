@@ -14,7 +14,7 @@ public class GleichmaessigesDreieckZylinder extends Form {
 
     @Override
     protected double getGrundflaeche() {
-        return (5 * getSeitenLaenge() * getDreiecksHoehe()) / 2;
+        return (getSeitenLaenge() * getDreiecksHoehe()) / 2;
     }
 
     @Override
