@@ -5,8 +5,6 @@ public class GleichmaessigesDreieckZylinder extends Form {
     private double seitenLaenge;
     private double dreiecksHoehe;
     //Zylinderhoehe
-    private double hoehe;
-
     public GleichmaessigesDreieckZylinder(double seiteA, double hoehe) {
         setSeitenLaenge(seiteA);
         setDreiecksHoehe();
@@ -50,14 +48,6 @@ public class GleichmaessigesDreieckZylinder extends Form {
 
     private void setSeitenLaenge(double seitenLaenge) {
         this.seitenLaenge = seitenLaenge;
-    }
-
-    public double getHoehe() {
-        return hoehe;
-    }
-
-    private void setHoehe(double hoehe) {
-        this.hoehe = hoehe;
     }
 
     /**

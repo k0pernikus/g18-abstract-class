@@ -1,11 +1,10 @@
 package koerper;
 public class KreisZylinder extends Form {
     private double radius;
-    private double hoehe;
 
-    KreisZylinder(double r, double h){
-        setRadius(r);
-        setHoehe(h);
+    KreisZylinder(double radius, double hoehe){
+        setRadius(radius);
+        setHoehe(hoehe);
     }
 
     @Override
@@ -28,11 +27,6 @@ public class KreisZylinder extends Form {
     }
 
     @Override
-    protected double getVolumen() {
-        return getGrundflaeche() * getHoehe();
-    }
-
-    @Override
     protected String getFormBezeichnung() {
         return "Kreiszylinder";
     }
@@ -47,17 +41,5 @@ public class KreisZylinder extends Form {
         }
         
         this.radius = radius;
-    }
-
-    public double getHoehe() {
-        return hoehe;
-    }
-
-    public void setHoehe(double hoehe) {
-        if (hoehe <= 0 ) {
-            throw new IllegalArgumentException("The number must be greater than 0.");
-        }
-        
-        this.hoehe = hoehe;
     }
 }

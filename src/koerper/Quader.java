@@ -2,7 +2,6 @@ package koerper;
 public class Quader extends Form {
     private double seiteA;
     private double seiteB;
-    private double hoehe;
 
     Quader(double seiteA, double seiteB, double hoehe) {
         setSeiteA(seiteA);
@@ -51,13 +50,5 @@ public class Quader extends Form {
 
     private void getSeiteB(double seiteB) {
         this.seiteB = seiteB;
-    }
-
-    public double getHoehe() {
-        return hoehe;
-    }
-
-    private void setHoehe(double getHoehe) {
-        this.hoehe = getHoehe;
     }
 }
