@@ -2,7 +2,6 @@ package koerper;
 
 public class GleichmaessigesDreieckZylinder extends Form {
     //Dreieckseiten
-
     private double a;
     private double dreiecksHoehe;
     //Zylinderhoehe
@@ -23,14 +22,11 @@ public class GleichmaessigesDreieckZylinder extends Form {
 
     @Override
     protected double berechneOberflaeche() {
-        // Dreieckseiten
-        2 * getGrundflaeche();
-        
-        // drei rechtecke seiten a * h
+        double dreiecksSeiten = 2 * getGrundflaeche();
+        double seitenflaechen = 2 * (getA()*getH());
 
-        seiten = 3 * (getA()*getH())
-
-        return 0;
+        double oberflaeche = dreiecksSeiten + seitenflaechen;
+        return oberflaeche;
     }
 
     @Override
