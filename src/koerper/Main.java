@@ -15,7 +15,5 @@ public class Main {
         k.displayData();
         k.setHoehe(25);
         k.displayData();
-
-        k.setRadius(-1);
     }
 }
