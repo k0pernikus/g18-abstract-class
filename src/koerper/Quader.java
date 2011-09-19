@@ -6,11 +6,11 @@ public class Quader extends Form {
     Quader(double seiteA, double seiteB, double hoehe) {
         setSeiteA(seiteA);
         getSeiteB(seiteB);
-        setHoehe(hoehe);
+        setCylinderHeight(hoehe);
     }
 
     @Override
-    public String getFormBezeichnung() {
+    public String getFormDescription() {
         return "Quader";
     }
 
@@ -21,7 +21,7 @@ public class Quader extends Form {
 
     @Override
     public double getOberflaeche() {
-        return 2 * (getGrundflaeche() + getA()*getHoehe() + getSeiteB()*getHoehe());
+        return 2 * (getGrundflaeche() + getA()*getCylinderHeight() + getSeiteB()*getCylinderHeight());
     }
 
     @Override
@@ -30,8 +30,8 @@ public class Quader extends Form {
     }
 
     @Override
-    public double getVolumen() {
-        return getGrundflaeche() * getHoehe();
+    public double getVolume() {
+        return getGrundflaeche() * getCylinderHeight();
     }
 
     // Specific Setters Getters

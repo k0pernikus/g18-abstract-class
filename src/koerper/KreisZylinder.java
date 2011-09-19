@@ -4,7 +4,7 @@ public class KreisZylinder extends Form {
 
     KreisZylinder(double radius, double hoehe){
         setRadius(radius);
-        setHoehe(hoehe);
+        setCylinderHeight(hoehe);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class KreisZylinder extends Form {
     }
 
     private double getMantelflaeche() {
-        return getUmfangGrundflaeche() * getHoehe();
+        return getUmfangGrundflaeche() * getCylinderHeight();
     }
 
     @Override
@@ -27,7 +27,7 @@ public class KreisZylinder extends Form {
     }
 
     @Override
-    protected String getFormBezeichnung() {
+    protected String getFormDescription() {
         return "Kreiszylinder";
     }
 

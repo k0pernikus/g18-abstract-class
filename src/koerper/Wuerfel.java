@@ -6,7 +6,7 @@ public class Wuerfel extends Quader {
     }
 
     @Override
-    public String getFormBezeichnung() {
+    public String getFormDescription() {
         return "Würfel";
     }
 }

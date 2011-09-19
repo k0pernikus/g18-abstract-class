@@ -1,66 +1,51 @@
 package koerper;
 
 public class GleichmaessigesDreieckZylinder extends Form {
-    //Dreieckseiten
-    private double seitenLaenge;
-    private double dreiecksHoehe;
-    //Zylinderhoehe
-    public GleichmaessigesDreieckZylinder(double seiteA, double hoehe) {
-        setSeitenLaenge(seiteA);
-        setDreiecksHoehe();
+    private double sideLength;
 
-        setHoehe(hoehe);
+    public GleichmaessigesDreieckZylinder(double sideLength, double cylinderHeight) {
+        setSeitenLaenge(sideLength);
+        setCylinderHeight(cylinderHeight);
     }
 
     @Override
     protected double getGrundflaeche() {
-        return (getSeitenLaenge() * getDreiecksHoehe()) / 2;
+        return (getSideLength() * getDreiecksHoehe()) / 2;
     }
 
     @Override
     protected double getOberflaeche() {
         double dreiecksSeiten = 2 * getGrundflaeche();
-        double seitenflaechen = 2 * (getSeitenLaenge()*getHoehe());
+        double seitenflaechen = 2 * (getSideLength() * getCylinderHeight());
 
         double oberflaeche = dreiecksSeiten + seitenflaechen;
         return oberflaeche;
     }
 
-
     @Override
     protected double getUmfangGrundflaeche() {
-        return 3 * getSeitenLaenge();
+        return 3 * getSideLength();
     }
 
     @Override
-    protected double getVolumen() {
-        return getGrundflaeche() * getHoehe();
+    protected double getVolume() {
+        return getGrundflaeche() * getCylinderHeight();
     }
 
     @Override
-    protected String getFormBezeichnung() {
+    protected String getFormDescription() {
         return "Dreieckszylinder";
     }
 
-    public double getSeitenLaenge() {
-        return seitenLaenge;
+    public double getSideLength() {
+        return sideLength;
     }
 
     private void setSeitenLaenge(double seitenLaenge) {
-        this.seitenLaenge = seitenLaenge;
+        this.sideLength = seitenLaenge;
     }
 
-    /**
-     * @return the dreiecksHoehe
-     */
     private double getDreiecksHoehe() {
-        return dreiecksHoehe;
-    }
-
-    /**
-     * @param dreiecksHoehe the dreiecksHoehe to set
-     */
-    private void setDreiecksHoehe() {
-        this.dreiecksHoehe = getSeitenLaenge() * getSeitenLaenge() * 0.75;
+        return getSideLength() * getSideLength() * 0.75;
     }
 }
