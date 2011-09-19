@@ -1,5 +1,5 @@
 package koerper;
-public class KreisZylinder extends Form {
+public class KreisZylinder extends Cylinder {
     private double radius;
 
     KreisZylinder(double radius, double hoehe){

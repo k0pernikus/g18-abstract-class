@@ -1,12 +1,12 @@
 package koerper;
-public class Quader extends Form {
-    private double seiteA;
-    private double seiteB;
+public class Quader extends Cylinder {
+    private double sideLengthA;
+    private double sideLengthB;
 
-    Quader(double seiteA, double seiteB, double hoehe) {
-        setSeiteA(seiteA);
-        getSeiteB(seiteB);
-        setCylinderHeight(hoehe);
+    Quader(double sideLengthA, double sideLengthB, double cylinderHeight) {
+        setSideLengthA(sideLengthA);
+        setSideLengthB(sideLengthB);
+        setCylinderHeight(cylinderHeight);
     }
 
     @Override
@@ -16,17 +16,17 @@ public class Quader extends Form {
 
     @Override
     public double getGrundflaeche() {
-        return getA() * getSeiteB();
+        return getSideLengthA() * getSideLengthB();
     }
 
     @Override
     public double getOberflaeche() {
-        return 2 * (getGrundflaeche() + getA()*getCylinderHeight() + getSeiteB()*getCylinderHeight());
+        return 2 * (getGrundflaeche() + getSideLengthA()*getCylinderHeight() + getSideLengthB() *getCylinderHeight());
     }
 
     @Override
     public double getUmfangGrundflaeche() {
-        return 2 * getA() + 2 * getSeiteB();
+        return 2 * getSideLengthA() + 2 * getSideLengthB();
     }
 
     @Override
@@ -36,19 +36,19 @@ public class Quader extends Form {
 
     // Specific Setters Getters
 
-    public double getA() {
-        return seiteA;
+    public double getSideLengthA() {
+        return sideLengthA;
     }
 
-    private void setSeiteA(double a) {
-        this.seiteA = a;
+    private void setSideLengthA(double sideLengthA) {
+        this.sideLengthA = sideLengthA;
     }
 
-    public double getSeiteB() {
-        return seiteB;
+    public double getSideLengthB() {
+        return sideLengthB;
     }
 
-    private void getSeiteB(double seiteB) {
-        this.seiteB = seiteB;
+    private void setSideLengthB(double sideLengthB) {
+        this.sideLengthB = sideLengthB;
     }
 }

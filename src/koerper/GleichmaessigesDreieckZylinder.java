@@ -1,11 +1,17 @@
 package koerper;
 
-public class GleichmaessigesDreieckZylinder extends Form {
+public class GleichmaessigesDreieckZylinder extends Cylinder {
+
     private double sideLength;
 
     public GleichmaessigesDreieckZylinder(double sideLength, double cylinderHeight) {
-        setSeitenLaenge(sideLength);
+        setSideLength(sideLength);
         setCylinderHeight(cylinderHeight);
+    }
+
+    @Override
+    protected String getFormDescription() {
+        return "Dreieckszylinder";
     }
 
     @Override
@@ -27,22 +33,12 @@ public class GleichmaessigesDreieckZylinder extends Form {
         return 3 * getSideLength();
     }
 
-    @Override
-    protected double getVolume() {
-        return getGrundflaeche() * getCylinderHeight();
-    }
-
-    @Override
-    protected String getFormDescription() {
-        return "Dreieckszylinder";
-    }
-
     public double getSideLength() {
         return sideLength;
     }
 
-    private void setSeitenLaenge(double seitenLaenge) {
-        this.sideLength = seitenLaenge;
+    private void setSideLength(double sideLength) {
+        this.sideLength = sideLength;
     }
 
     private double getDreiecksHoehe() {
