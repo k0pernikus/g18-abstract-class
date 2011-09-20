@@ -1,40 +1,42 @@
 package koerper;
-public class Quader extends Cylinder {
+public class Cuboid extends Cylinder {
     private double sideLengthA;
     private double sideLengthB;
 
-    Quader(double sideLengthA, double sideLengthB, double cylinderHeight) {
+    Cuboid(double sideLengthA, double sideLengthB, double cylinderHeight) {
         setSideLengthA(sideLengthA);
         setSideLengthB(sideLengthB);
         setCylinderHeight(cylinderHeight);
     }
 
     @Override
-    public String getFormDescription() {
+    public String getCylinderDescription() {
         return "Quader";
     }
 
     @Override
-    public double getGrundflaeche() {
+    public double getBaseArea() {
         return getSideLengthA() * getSideLengthB();
     }
 
     @Override
-    public double getOberflaeche() {
-        return 2 * (getGrundflaeche() + getSideLengthA() * getCylinderHeight() + getSideLengthB() * getCylinderHeight());
+    public double getCylinderLateralSurface() {
+        double rectangles1 = 2 * getSideLengthA() * getCylinderHeight();
+        double rectangles2 = 2 * getSideLengthB() * getCylinderHeight();
+
+        return rectangles1 + rectangles2;
     }
 
     @Override
-    public double getUmfangGrundflaeche() {
+    public double getCircumferenceBasicArea() {
         return 2 * getSideLengthA() + 2 * getSideLengthB();
     }
 
     @Override
-    public double getVolume() {
-        return getGrundflaeche() * getCylinderHeight();
+    public double getCylinderVolume() {
+        return getBaseArea() * getCylinderHeight();
     }
 
-    // Specific Setters
     public double getSideLengthA() {
         return sideLengthA;
     }
@@ -43,7 +45,6 @@ public class Quader extends Cylinder {
         return sideLengthB;
     }
 
-    // Getters
     private void setSideLengthA(double sideLengthA) {
         validate(sideLengthA);
         this.sideLengthA = sideLengthA;
