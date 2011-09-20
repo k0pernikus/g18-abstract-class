@@ -1,18 +1,14 @@
 package koerper;
-
 public class Main {
     public static void main(String[] args) {
-        Cylinder q = new Cuboid(12, 7, 18);
-        Cylinder w = new Dice(4);
-        Cylinder k = new Circle(15, 7);
-        Cylinder d = new EquilateralTriangle(5, 5);
+        Cuboid cub = new Cuboid(12, 7, 18);
+        Dice d = new Dice(4);
+        Circle c = new Circle(15, 7);
+        EquilateralTriangle et = new EquilateralTriangle(5, 5);
 
-        q.displayData();
-        w.displayData();
         d.displayData();
-        k.displayData();
-
-        //Cylinder dInvalid = new EquilateralTriangle(5, -3);
-
+        et.displayData();
+        c.displayData();
+        cub.displayData();
     }
 }

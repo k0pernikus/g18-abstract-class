@@ -19,8 +19,7 @@ abstract class Cylinder {
     public double getCylinderSurfaceArea() {
         return 2 * getBaseArea() + getCylinderLateralSurface();
     }
-
-
+    
     // Output all Data:
     public void displayData() {
         System.out.println("Bezeichnung: " + getCylinderDescription());

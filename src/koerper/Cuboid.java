@@ -45,12 +45,12 @@ public class Cuboid extends Cylinder {
         return sideLengthB;
     }
 
-    private void setSideLengthA(double sideLengthA) {
+    public void setSideLengthA(double sideLengthA) {
         validate(sideLengthA);
         this.sideLengthA = sideLengthA;
     }
 
-    private void setSideLengthB(double sideLengthB) {
+    public void setSideLengthB(double sideLengthB) {
         validate(sideLengthB);
         this.sideLengthB = sideLengthB;
     }
