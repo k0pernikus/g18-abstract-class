@@ -23,8 +23,8 @@ public class GleichmaessigesDreieckZylinder extends Cylinder {
     protected double getOberflaeche() {
         double dreiecksSeiten = 2 * getGrundflaeche();
         double seitenflaechen = 2 * (getSideLength() * getCylinderHeight());
-
         double oberflaeche = dreiecksSeiten + seitenflaechen;
+
         return oberflaeche;
     }
 
@@ -38,10 +38,8 @@ public class GleichmaessigesDreieckZylinder extends Cylinder {
     }
 
     private void setSideLength(double sideLength) {
-        if (sideLength <= 0) {
-            throw new IllegalArgumentException("The number must be greater than 0.");
-        }
-
+        validate(sideLength);
+        
         this.sideLength = sideLength;
     }
 

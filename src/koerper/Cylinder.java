@@ -2,6 +2,7 @@ package koerper;
 
 abstract class Cylinder {
     //every zylinder needs height
+
     private double cylinderHeight;
 
     public double getCylinderHeight() {
@@ -9,11 +10,14 @@ abstract class Cylinder {
     }
 
     public void setCylinderHeight(double cylinderHeight) {
-        if (cylinderHeight <= 0) {
+        validate(cylinderHeight);
+        this.cylinderHeight = cylinderHeight;
+    }
+
+    protected void validate(double numberToValidate) throws IllegalArgumentException {
+        if (numberToValidate <= 0) {
             throw new IllegalArgumentException("The number must be greater than 0.");
         }
-
-        this.cylinderHeight = cylinderHeight;
     }
 
     // abstract calc methods

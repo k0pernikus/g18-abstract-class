@@ -40,9 +40,7 @@ public class Quader extends Cylinder {
     }
 
     private void setSideLengthA(double sideLengthA) {
-        if (sideLengthA <= 0) {
-            throw new IllegalArgumentException("The number must be greater than 0.");
-        }
+        validate(sideLengthA);
         this.sideLengthA = sideLengthA;
     }
 
@@ -51,9 +49,7 @@ public class Quader extends Cylinder {
     }
 
     private void setSideLengthB(double sideLengthB) {
-         if (sideLengthA <= 0) {
-            throw new IllegalArgumentException("The number must be greater than 0.");
-        }
+        validate(sideLengthB);
          
         this.sideLengthB = sideLengthB;
     }

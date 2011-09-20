@@ -36,9 +36,7 @@ public class KreisZylinder extends Cylinder {
     }
 
     public void setRadius(double radius) {
-        if (radius <= 0 ) {
-            throw new IllegalArgumentException("The number must be greater than 0.");
-        }
+        validate(radius);
         
         this.radius = radius;
     }
