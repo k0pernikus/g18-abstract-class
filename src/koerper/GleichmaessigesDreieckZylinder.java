@@ -38,6 +38,10 @@ public class GleichmaessigesDreieckZylinder extends Cylinder {
     }
 
     private void setSideLength(double sideLength) {
+        if (sideLength <= 0) {
+            throw new IllegalArgumentException("The number must be greater than 0.");
+        }
+
         this.sideLength = sideLength;
     }
 

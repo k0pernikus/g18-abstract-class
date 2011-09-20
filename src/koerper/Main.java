@@ -11,5 +11,8 @@ public class Main {
         w.displayData();
         d.displayData();
         k.displayData();
+
+        //Cylinder dInvalid = new GleichmaessigesDreieckZylinder(5, -3);
+
     }
 }
