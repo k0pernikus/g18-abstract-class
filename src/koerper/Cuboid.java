@@ -11,9 +11,9 @@ public class Cuboid extends Cylinder {
 
     @Override
     public String getCylinderDescription() {
-        boolean isCubloid = getSideLengthA() == getSideLengthB() && getSideLengthB() ==  getCylinderHeight();
+        boolean isCube = getSideLengthA() == getSideLengthB() && getSideLengthB() ==  getCylinderHeight();
 
-        if(isCubloid){
+        if(isCube){
             
             return "Würfel";
         }
