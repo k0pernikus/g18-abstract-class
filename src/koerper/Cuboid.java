@@ -11,6 +11,13 @@ public class Cuboid extends Cylinder {
 
     @Override
     public String getCylinderDescription() {
+        boolean isCubloid = getSideLengthA() == getSideLengthB() && getSideLengthB() ==  getCylinderHeight();
+
+        if(isCubloid){
+            
+            return "Würfel";
+        }
+
         return "Quader";
     }
 
@@ -32,11 +39,6 @@ public class Cuboid extends Cylinder {
         return 2 * getSideLengthA() + 2 * getSideLengthB();
     }
 
-    @Override
-    public double getCylinderVolume() {
-        return getBaseArea() * getCylinderHeight();
-    }
-
     public double getSideLengthA() {
         return sideLengthA;
     }
@@ -53,5 +55,11 @@ public class Cuboid extends Cylinder {
     public void setSideLengthB(double sideLengthB) {
         validate(sideLengthB);
         this.sideLengthB = sideLengthB;
+    }
+
+    public void setAllSideLengths(double sideLength) {
+        setSideLengthA(sideLength);
+        setSideLengthB(sideLength);
+        setCylinderHeight(sideLength);
     }
 }

@@ -1,17 +1,28 @@
 package koerper;
 
+// My laziness knows no bounds!
+import static java.lang.System.out;
+
 abstract class Cylinder {
     // property each cylinder has in common,
     // hence setter/getter is defined here as well
     private double cylinderHeight;
 
     // abstract calc methods
+    // each form needs them but calculation differs
     abstract public String getCylinderDescription();
     abstract public double getBaseArea();
     abstract public double getCircumferenceBasicArea();
     abstract public double getCylinderLateralSurface();
 
-    // these methods are not dependent on the form
+
+    /*
+     *  these methods are not dependent on the form
+     *  so they are included here
+     *  note that the method they call are the concrete ones
+     *  of their own class
+     */
+    
     public double getCylinderVolume() {
         return getBaseArea() * getCylinderHeight();
     }
@@ -20,16 +31,22 @@ abstract class Cylinder {
         return 2 * getBaseArea() + getCylinderLateralSurface();
     }
     
-    // Output all Data:
+    /*
+     * Outout all Data on Console
+     */
     public void displayData() {
-        System.out.println("Bezeichnung: " + getCylinderDescription());
-        System.out.println("Grundflaeche: " + getBaseArea());
-        System.out.println("Oberflaeche: " + getCylinderSurfaceArea());
-        System.out.println("UmfangGrundflaeche: " + getCircumferenceBasicArea());
-        System.out.println("Volumen: " + getCylinderVolume());
-        System.out.println("=====================");
-        System.out.println();
+        out.println("Bezeichnung: " + getCylinderDescription());
+        out.println("Grundflaeche: " + getBaseArea());
+        out.println("Oberflaeche: " + getCylinderSurfaceArea());
+        out.println("UmfangGrundflaeche: " + getCircumferenceBasicArea());
+        out.println("Volumen: " + getCylinderVolume());
+        out.println("=====================");
+        out.println();
     }
+
+    /*
+     * Getter, setter and input validation
+     */
 
     public double getCylinderHeight() {
         return cylinderHeight;
@@ -40,7 +57,6 @@ abstract class Cylinder {
         this.cylinderHeight = cylinderHeight;
     }
 
-    // checks if number is negative or null
     protected void validate(double numberToValidate) throws IllegalArgumentException {
         if (numberToValidate <= 0) {
             throw new IllegalArgumentException("The number must be greater than 0.");
